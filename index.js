@@ -20,6 +20,7 @@ console.log('Ai provider: ', AI_PROVIDER);
 const ENDPOINT = args.ENDPOINT || process.env.ENDPOINT
 
 const apiKey = args.apiKey || process.env.OPENAI_API_KEY;
+const apiBaseUrl = args.apiBaseUrl || process.env.OPENAI_API_BASE_URL || 'https://api.openai.com/v1';
 
 const language = args.language || process.env.AI_COMMIT_LANGUAGE || 'english';
 
@@ -107,7 +108,7 @@ const sendMessage = async (input) => {
 
     console.log('prompting chat gpt...')
     const api = new ChatGPTAPI({
-      apiKey,
+      apiKey, apiBaseUrl 
     });
     const { text } = await api.sendMessage(input);
     console.log('prompting ai done!')
