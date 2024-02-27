@@ -1,5 +1,5 @@
 {
-  "name": "ai-commit",
+  "name": "@terranlabs/ai-commit",
   "version": "2.1.1",
   "type": "module",
   "description": "✨ Make Github commits easier with ChatGPT, Gitmoji and Conventional Commits 🚀",
